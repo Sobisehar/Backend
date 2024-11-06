@@ -56,7 +56,7 @@ app.post("/api/login", async (req,res) => {
 }
 
   const comparePassword = await bcrypt.compare(
-    password, emailExist.password
+    password, emailExit.password
   )
   if(!comparePassword){
     res.json({
