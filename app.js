@@ -10,6 +10,8 @@ import cors from 'cors'
 const app = express();
 // const PORT = 5000;
 const PORT = process.env.PORT
+// const DBURI = "mongodb+srv://sobia:sobia@cluster0.54u79.mongodb.net/";
+const DBURI = process.env.MONGODB_URI
 
 // MiddleWares
 
@@ -19,8 +21,6 @@ app.use(cors())
 
 // mongodb configuration
 
-// const DBURI = "mongodb+srv://sobia:sobia@cluster0.54u79.mongodb.net/";
-const DBURI = process.env.MONGODB_URI
 
 mongoose.connect(DBURI);
 
